@@ -3,7 +3,7 @@ name: workflow
 description: Flujo de trabajo recomendado para analizar, implementar, validar y cerrar tareas.
 ---
 
-# skills-workflow.md
+# workflow.md
 
 ## 1. Objetivo
 
@@ -13,7 +13,7 @@ Reglas de flujo de trabajo para que el agente genere, refactorice y revise códi
 
 ## 2. Principios
 
-* ✅ Seguir reglas de `skills-architecture.md` primero
+* ✅ Seguir reglas de `architecture.md` primero
 * ✅ Adaptar código existente
 * ✅ Validar seguridad y coherencia
 * ❌ NO improvisar cambios estructurales grandes
@@ -28,7 +28,7 @@ Reglas de flujo de trabajo para que el agente genere, refactorice y revise códi
 4. Revisar seguridad y SEO
 5. Documentar cambios mínimos en Markdown
 6. Probar funcionalidad
-7. Validar cierre con `skills-definition-of-done.md`
+7. Validar cierre con `definition-of-done.md`
 
 ---
 

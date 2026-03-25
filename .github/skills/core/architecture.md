@@ -3,7 +3,7 @@ name: architecture
 description: Reglas arquitectónicas globales, prioridades y restricciones obligatorias del proyecto.
 ---
 
-# skills-architecture.md
+# architecture.md
 
 ## 1. Objetivo
 
@@ -35,7 +35,7 @@ Este documento tiene **prioridad máxima** sobre cualquier otro `skills.md`.
 
 En caso de conflicto, el agente debe seguir este orden:
 
-1. `skills-architecture.md`
+1. `architecture.md`
 2. Reglas específicas del proyecto
 3. APIs de Joomla
 4. Buenas prácticas generales

@@ -3,7 +3,7 @@ name: joomla-data-json
 description: Reglas para uso de JSON geográfico en modo solo lectura, carga eficiente y validación.
 ---
 
-# skills-joomla-data-json.md
+# joomla-data-json.md
 
 ## 1. Objetivo
 

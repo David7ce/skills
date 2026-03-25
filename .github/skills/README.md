@@ -1,64 +1,77 @@
-# Skills para agente IA - Proyecto Joomla
+# Skills para ai-copilot-config
 
 ## 1. Propósito
 
-Estos archivos de skills definen **reglas, normas y buenas prácticas** para el agente de IA que trabajará en este proyecto Joomla.
+Este directorio define skills reutilizables para agentes de IA en VS Code, organizados para evitar conflicto entre reglas compartidas y reglas por framework.
 
-Su objetivo:
+Objetivos:
 
-- Mantener consistencia
-- Evitar errores de arquitectura, seguridad y rendimiento
-- Guiar generación de código, refactorización y pruebas
+- mantener consistencia técnica,
+- reducir duplicación de reglas,
+- soportar varios proyectos (ej. Joomla y Astro) con una misma base.
 
----
-
-## 2. Instrucciones de uso
-
-1. Abrir VS Code en la raíz del repositorio y trabajar con `joomla-skills/`.
-2. Mantener abiertos **los archivos principales** mientras se trabaja en código:
-   - `skills-architecture.md`
-   - `skills-js.md`
-   - `skills-joomla.md`
-3. Para nuevas tareas, consultar siempre las reglas de:
-   - arquitectura
-   - JS
-   - PHP
-   - CSS
-4. Usar como **guía de contexto para Copilot Chat / Claude / GPT-Codex**:
-   - Al generar código, copiar la sección relevante en el prompt o mantener el archivo abierto.
-   - Nunca ignorar reglas críticas de `skills-architecture.md`.
-
----
-
-## 3. Jerarquía y dependencias
+## 2. Organización recomendada (core + proyecto)
 
 ```plaintext
-skills-architecture.md (PRIORIDAD MÁXIMA)
-|
-├── skills-js.md
-|     └── skills-js-leaflet.md
-|
-├── skills-joomla.md
-|     └── skills-joomla-data-json.md
-|
-├── skills-php.md
-|
-├── skills-css.md
-|
-├── skills-workflow.md
-|
-├── skills-review.md
-|
-├── skills-testing.md
-|
-└── skills-definition-of-done.md
+.github/skills/
+├── core/
+│   ├── architecture.md
+│   ├── workflow.md
+│   ├── review.md
+│   ├── testing.md
+│   ├── definition-of-done.md
+│   ├── frontend-html.md
+│   ├── frontend-css.md
+│   ├── frontend-javascript.md
+│   └── backend-data.md
+└── projects/
+	├── joomla/
+	│   ├── joomla.md
+	│   ├── joomla-data-json.md
+	│   └── javascript-leaflet.md
+	└── astro/
+		├── astro.md
+		├── astro-content.md
+		└── astro-routing.md
 ```
 
----
+## 3. Reglas de precedencia (anti-conflicto)
 
-## 4. Flujo recomendado para IA
+Orden obligatorio de aplicación:
 
-1. Leer `skills-architecture.md`.
-2. Aplicar el skill técnico principal según tarea (JS, Joomla, PHP, CSS, JSON, Leaflet).
-3. Ejecutar validación con `skills-review.md` y `skills-testing.md`.
-4. Confirmar cierre de tarea con `skills-definition-of-done.md`.
+1. `core/architecture.md`
+2. skill técnico de `core` (frontend/backend)
+3. skill de `projects/<framework>`
+4. skill de tarea puntual (si existe)
+
+Si hay conflicto, prevalece la regla más específica del proyecto. La excepción debe documentarse en el skill del proyecto para que no se replique en otros repositorios.
+
+## 4. Flujo de uso recomendado
+
+1. Cargar arquitectura y workflow desde `core`.
+2. Cargar skills comunes de frontend/backend desde `core`.
+3. Seleccionar el paquete de proyecto (`projects/joomla` o `projects/astro`).
+4. Ejecutar checklist de `core/review.md` y `core/testing.md`.
+5. Cerrar con `core/definition-of-done.md`.
+
+## 5. Mapeo de nombres aplicados
+
+La migración ya fue aplicada con esta equivalencia:
+
+| Actual                         | Propuesto                               |
+|--------------------------------|-----------------------------------------|
+| `skills-architecture.md`       | `core/architecture.md`                  |
+| `skills-workflow.md`           | `core/workflow.md`                      |
+| `skills-review.md`             | `core/review.md`                        |
+| `skills-testing.md`            | `core/testing.md`                       |
+| `skills-definition-of-done.md` | `core/definition-of-done.md`            |
+| `skills-js.md`                 | `core/frontend-javascript.md`           |
+| `skills-css.md`                | `core/frontend-css.md`                  |
+| `skills-php.md`                | `projects/joomla/php.md`                |
+| `skills-js-leaflet.md`         | `projects/joomla/javascript-leaflet.md` |
+| `skills-joomla.md`             | `projects/joomla/joomla.md`             |
+| `skills-joomla-data-json.md`   | `projects/joomla/joomla-data-json.md`   |
+
+## 6. Estado
+
+Referencias internas de skills, prompts y agentes Joomla ya actualizadas al nuevo árbol `core/projects`.

@@ -3,7 +3,7 @@ name: javascript
 description: Reglas de JavaScript modular (vanilla + ES modules), carga de datos y rendimiento.
 ---
 
-# skills-js.md
+# frontend-javascript.md
 
 ## 1. Objetivo
 

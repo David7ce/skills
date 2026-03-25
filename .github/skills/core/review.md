@@ -3,7 +3,7 @@ name: review
 description: Checklist de revisión técnica para validar arquitectura, seguridad y calidad antes de aprobar.
 ---
 
-# skills-review.md
+# review.md
 
 ## 1. Objetivo
 
@@ -13,7 +13,7 @@ Reglas para revisar código y detectar errores o inconsistencias.
 
 ## 2. Principios
 
-* ✅ Seguir `skills-architecture.md` y `skills-js.md`
+* ✅ Seguir `architecture.md` y `frontend-javascript.md`
 * ✅ Revisar:
     * modularidad
     * seguridad
@@ -39,7 +39,7 @@ Reglas para revisar código y detectar errores o inconsistencias.
 
 ## 4. Cierre de revisión
 
-* ✅ Confirmar `skills-definition-of-done.md` antes de aprobar
+* ✅ Confirmar `definition-of-done.md` antes de aprobar
 
 ---
 

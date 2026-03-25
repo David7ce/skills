@@ -3,7 +3,7 @@ name: testing
 description: Estrategia y checklist de pruebas funcionales y de seguridad para funcionalidades críticas.
 ---
 
-# skills-testing.md
+# testing.md
 
 ## 1. Objetivo
 
@@ -43,7 +43,7 @@ Definir pruebas obligatorias y revisión de funcionalidades críticas.
 
 ## 5. Cierre de testing
 
-* ✅ Confirmar `skills-definition-of-done.md` antes de marcar tarea como finalizada
+* ✅ Confirmar `definition-of-done.md` antes de marcar tarea como finalizada
 
 ---
 

@@ -15,18 +15,18 @@ Contexto funcional:
 - [RESTRICCIONES ADICIONALES]
 
 Flujo obligatorio a seguir:
-1. Leer `joomla-skills/skills-architecture.md` y respetar prioridad máxima.
+1. Leer `.github/skills/core/architecture.md` y respetar prioridad máxima.
 2. Aplicar los skills técnicos necesarios según la tarea:
-   - JS: `joomla-skills/skills-js.md`
-   - Leaflet (si aplica): `joomla-skills/skills-js-leaflet.md`
-   - PHP: `joomla-skills/skills-php.md`
-   - CSS: `joomla-skills/skills-css.md`
-   - Joomla: `joomla-skills/skills-joomla.md`
-   - JSON: `joomla-skills/skills-joomla-data-json.md`
+   - JS: `.github/skills/core/frontend-javascript.md`
+   - Leaflet (si aplica): `.github/skills/projects/joomla/javascript-leaflet.md`
+   - PHP: `.github/skills/projects/joomla/php.md`
+   - CSS: `.github/skills/core/frontend-css.md`
+   - Joomla: `.github/skills/projects/joomla/joomla.md`
+   - JSON: `.github/skills/projects/joomla/joomla-data-json.md`
 3. Verificar con:
-   - `joomla-skills/skills-review.md`
-   - `joomla-skills/skills-testing.md`
-4. Cerrar solo si cumple `joomla-skills/skills-definition-of-done.md`.
+   - `.github/skills/core/review.md`
+   - `.github/skills/core/testing.md`
+4. Cerrar solo si cumple `.github/skills/core/definition-of-done.md`.
 
 Criterios de implementación:
 - Cambios mínimos, seguros y consistentes con Joomla MVC.

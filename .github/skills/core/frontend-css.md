@@ -3,7 +3,7 @@ name: css
 description: Estándares CSS del proyecto con BEM, mobile-first y organización por componentes.
 ---
 
-# skills-css.md
+# frontend-css.md
 
 ## 1. Objetivo
 

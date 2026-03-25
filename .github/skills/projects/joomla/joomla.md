@@ -3,7 +3,7 @@ name: joomla
 description: Buenas prácticas y restricciones para desarrollo seguro en Joomla respetando MVC y APIs.
 ---
 
-# skills-joomla.md
+# joomla.md
 
 ## 1. Objetivo
 
@@ -164,7 +164,7 @@ $article->store();
 * Seguir reglas estrictas
 * Usar APIs primero
 * Evitar improvisación
-* Mantener coherencia con `skills-js.md` y `skills-architecture.md`
+* Mantener coherencia con `.github/skills/core/frontend-javascript.md` y `.github/skills/core/architecture.md`
 * Documentar cambios críticos
 
 ---

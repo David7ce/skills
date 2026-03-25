@@ -3,7 +3,7 @@ name: definition-of-done
 description: Criterios obligatorios para considerar una tarea como terminada y aprobable.
 ---
 
-# skills-definition-of-done.md
+# definition-of-done.md
 
 ## 1. Objetivo
 
@@ -16,7 +16,7 @@ Definir un criterio único de cierre para tareas implementadas por IA en este pr
 Una tarea se considera terminada solo si cumple todo lo siguiente:
 
 1. Arquitectura respetada
-   - Sigue `skills-architecture.md`
+   - Sigue `architecture.md`
    - No introduce cambios estructurales no autorizados
 
 2. Seguridad validada
@@ -40,8 +40,8 @@ Una tarea se considera terminada solo si cumple todo lo siguiente:
    - Sin cargas duplicadas ni bloqueo evitable de render
 
 6. Calidad verificable
-   - Checklist de `skills-review.md` completado
-   - Checklist de `skills-testing.md` ejecutado
+   - Checklist de `review.md` completado
+   - Checklist de `testing.md` ejecutado
    - Cambios críticos documentados en Markdown
 
 ---
