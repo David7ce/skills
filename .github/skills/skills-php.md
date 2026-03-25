@@ -1,3 +1,8 @@
+---
+name: php
+description: Estándares PHP para Joomla con enfoque en APIs internas, seguridad y consistencia de datos.
+---
+
 # skills-php.md
 
 ## 1. Objetivo

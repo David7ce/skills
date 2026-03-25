@@ -1,3 +1,8 @@
+---
+name: joomla
+description: Buenas prácticas y restricciones para desarrollo seguro en Joomla respetando MVC y APIs.
+---
+
 # skills-joomla.md
 
 ## 1. Objetivo

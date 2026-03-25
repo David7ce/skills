@@ -1,3 +1,8 @@
+---
+name: review
+description: Checklist de revisión técnica para validar arquitectura, seguridad y calidad antes de aprobar.
+---
+
 # skills-review.md
 
 ## 1. Objetivo

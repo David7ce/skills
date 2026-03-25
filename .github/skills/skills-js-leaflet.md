@@ -1,3 +1,8 @@
+---
+name: js-leaflet
+description: Guía para integración modular de Leaflet/OpenStreetMap y manejo de capas, filtros y markers.
+---
+
 # skills-js-leaflet.md
 
 ## 1. Objetivo

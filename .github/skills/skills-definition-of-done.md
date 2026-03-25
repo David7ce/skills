@@ -1,3 +1,8 @@
+---
+name: definition-of-done
+description: Criterios obligatorios para considerar una tarea como terminada y aprobable.
+---
+
 # skills-definition-of-done.md
 
 ## 1. Objetivo

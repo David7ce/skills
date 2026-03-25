@@ -1,3 +1,8 @@
+---
+name: workflow
+description: Flujo de trabajo recomendado para analizar, implementar, validar y cerrar tareas.
+---
+
 # skills-workflow.md
 
 ## 1. Objetivo

@@ -1,3 +1,8 @@
+---
+name: testing
+description: Estrategia y checklist de pruebas funcionales y de seguridad para funcionalidades críticas.
+---
+
 # skills-testing.md
 
 ## 1. Objetivo

@@ -1,3 +1,8 @@
+---
+name: architecture
+description: Reglas arquitectónicas globales, prioridades y restricciones obligatorias del proyecto.
+---
+
 # skills-architecture.md
 
 ## 1. Objetivo
