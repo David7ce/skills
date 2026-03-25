@@ -8,10 +8,10 @@ Definir pruebas obligatorias y revisión de funcionalidades críticas.
 
 ## 2. Principios
 
-* ✅ Testear formularios (validación, envío)
-* ✅ Testear mapa (filtros, búsqueda, clustering)
-* ✅ Testear generación de PDFs
-* ✅ Validar integridad de JSON y data
+* ✅ Probar formularios (validación, envío)
+* ✅ Probar mapa (filtros, búsqueda, clustering)
+* ✅ Probar generación de PDFs
+* ✅ Validar integridad de JSON y datos
 * ❌ NO ignorar errores de render
 
 ---
@@ -27,7 +27,7 @@ Definir pruebas obligatorias y revisión de funcionalidades críticas.
 
 ## 4. Checklist
 
-* [ ] Formularios funcionan (JS y server-side)
+* [ ] Formularios funcionan (JS y validación en servidor)
 * [ ] Mapas renderizan correctamente
 * [ ] Filtros aplican correctamente
 * [ ] PDF generado correctamente
@@ -36,8 +36,14 @@ Definir pruebas obligatorias y revisión de funcionalidades críticas.
 
 ---
 
-## 5. Anti-patrones
+## 5. Cierre de testing
+
+* ✅ Confirmar `skills-definition-of-done.md` antes de marcar tarea como finalizada
+
+---
+
+## 6. Anti-patrones
 
 * ❌ Saltarse validaciones
-* ❌ Modificar data sin comprobación
+* ❌ Modificar datos sin comprobación
 * ❌ Ignorar errores en la consola

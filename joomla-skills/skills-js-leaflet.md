@@ -11,8 +11,8 @@ Establecer reglas para el uso de Leaflet y OpenStreetMap.
 * ✅ Separar mapa de UI
 * ✅ Modularizar capas, markers y filtros
 * ✅ Usar clustering
-* ❌ No mezclar lógica global con DOM
-* ❌ No cargar datos directamente dentro del mapa
+* ❌ NO mezclar lógica global con DOM
+* ❌ NO cargar datos directamente dentro del mapa
 
 ---
 
@@ -53,5 +53,5 @@ addMarkers(map, data);
 ## 6. Anti-patrones
 
 * ❌ Mezclar UI y mapa
-* ❌ Data inline innecesaria
+* ❌ Datos inline innecesarios
 * ❌ Variables globales

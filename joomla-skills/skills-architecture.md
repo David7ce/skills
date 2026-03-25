@@ -51,7 +51,7 @@ En caso de conflicto, el agente debe seguir este orden:
 
 * ❌ NO romper el flujo de renderizado de Joomla
 
-* ❌ NO crear lógica fuera del sistema (hackeos)
+* ❌ NO crear lógica fuera del sistema (hacks)
 
 ---
 
@@ -64,7 +64,7 @@ En caso de conflicto, el agente debe seguir este orden:
 
   * artículos
   * menús
-  * items de menú
+  * ítems de menú
 
 #### Reglas:
 
@@ -94,7 +94,7 @@ En caso de conflicto, el agente debe seguir este orden:
 
 * ✅ Generados desde CSV
 
-* ❌ NO modificar en runtime
+* ❌ NO modificar en tiempo de ejecución
 
 * ❌ NO convertir en sistema dinámico
 
@@ -130,6 +130,11 @@ Estrategia obligatoria:
 | Datos críticos pequeños | Inline |
 | Datos grandes           | AJAX   |
 
+Umbrales operativos:
+
+* Inline: hasta 30 KB por payload y solo si es crítico para primer render.
+* AJAX: obligatorio para payloads mayores a 30 KB o datos no críticos de primer render.
+
 * ❌ NO cargar JSON grandes inline sin justificación
 * ❌ NO duplicar datos innecesariamente
 
@@ -143,7 +148,7 @@ Estrategia obligatoria:
 
 * ✅ Uso de variables CSS
 
-* ❌ NO usar frameworks CSS
+* ❌ NO usar frameworks CSS salvo autorización explícita del proyecto
 
 * ❌ NO clases ambiguas o genéricas
 
@@ -182,7 +187,7 @@ El agente debe actuar como si el código fuera producción.
 
 * Sanitización de datos
 * Escape de salida
-* Validación de inputs
+* Validación de entradas
 * Protección contra XSS y CSRF
 
 ### Prohibido:

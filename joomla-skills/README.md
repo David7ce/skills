@@ -1,25 +1,25 @@
-# Skills para Agente AI - Proyecto Joomla
+# Skills para agente IA - Proyecto Joomla
 
 ## 1. Propósito
 
-Estos archivos `skills.md` definen **reglas, normas y buenas prácticas** para el agente AI que trabajará en este proyecto Joomla.
+Estos archivos de skills definen **reglas, normas y buenas prácticas** para el agente de IA que trabajará en este proyecto Joomla.
 
 Su objetivo:
 
 - Mantener consistencia
 - Evitar errores de arquitectura, seguridad y rendimiento
-- Guiar generación de código, refactorización y testing
+- Guiar generación de código, refactorización y pruebas
 
 ---
 
 ## 2. Instrucciones de uso
 
-1. Abrir VS Code con la carpeta `/skills/`.
+1. Abrir VS Code en la raíz del repositorio y trabajar con `joomla-skills/`.
 2. Mantener abiertos **los archivos principales** mientras se trabaja en código:
    - `skills-architecture.md`
    - `skills-js.md`
    - `skills-joomla.md`
-3. Para nuevas tareas, referenciar siempre las reglas de:
+3. Para nuevas tareas, consultar siempre las reglas de:
    - arquitectura
    - JS
    - PHP
@@ -49,4 +49,16 @@ skills-architecture.md (PRIORIDAD MÁXIMA)
 |
 ├── skills-review.md
 |
-└── skills-testing.md
+├── skills-testing.md
+|
+└── skills-definition-of-done.md
+```
+
+---
+
+## 4. Flujo recomendado para IA
+
+1. Leer `skills-architecture.md`.
+2. Aplicar el skill técnico principal según tarea (JS, Joomla, PHP, CSS, JSON, Leaflet).
+3. Ejecutar validación con `skills-review.md` y `skills-testing.md`.
+4. Confirmar cierre de tarea con `skills-definition-of-done.md`.

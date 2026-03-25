@@ -1,4 +1,4 @@
-# skills-data-json.md
+# skills-joomla-data-json.md
 
 ## 1. Objetivo
 
@@ -17,7 +17,7 @@ Reglas para manejar JSON estáticos de datos geográficos dentro del proyecto. G
 * ✅ Fragmentados (≈13 archivos)
 * ✅ Solo lectura
 * ❌ NO convertir en base de datos dinámica
-* ❌ NO modificar en runtime
+* ❌ NO modificar en tiempo de ejecución
 
 ---
 
@@ -29,6 +29,11 @@ Reglas para manejar JSON estáticos de datos geográficos dentro del proyecto. G
 |----------------------|----------------|
 | Pequeño / crítico    | Inline         |
 | Grande               | AJAX (`fetch`) |
+
+Umbrales operativos:
+
+* Inline: hasta 30 KB por payload y solo si es crítico para primer render.
+* AJAX: obligatorio para payloads mayores a 30 KB o no críticos.
 
 * ✅ Evitar múltiples cargas
 * ✅ Manejar errores

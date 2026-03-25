@@ -22,7 +22,8 @@ Reglas de flujo de trabajo para que el agente genere, refactorice y revise códi
 3. Cargar datos de forma eficiente
 4. Revisar seguridad y SEO
 5. Documentar cambios mínimos en Markdown
-6. Testear funcionalidad
+6. Probar funcionalidad
+7. Validar cierre con `skills-definition-of-done.md`
 
 ---
 

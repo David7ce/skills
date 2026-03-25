@@ -15,18 +15,18 @@ Definir las reglas de desarrollo en PHP para Joomla y el proyecto, asegurando:
 
 * ✅ PHP solo para backend Joomla
 * ✅ Integración con JS mediante JSON seguro o inline controlado
-* ✅ Validación de todos los inputs
-* ✅ Sanitización de outputs
+* ✅ Validación de todas las entradas
+* ✅ Sanitización de salidas
 * ❌ NO modificar core de Joomla
-* ❌ NO bypass de MVC
+* ❌ NO saltarse MVC
 * ❌ NO SQL directo innecesario
 
 ---
 
 ## 3. Interacción con Joomla
 
-* ✅ Crear artículos, menús y items de menú usando APIs Joomla
-* ✅ Overrides mediante `JTable` y `JFactory`
+* ✅ Crear artículos, menús e ítems de menú usando APIs Joomla
+* ✅ Overrides mediante APIs modernas de Joomla (`Table`, `Factory`)
 * ✅ Evitar consultas directas cuando exista API
 * ✅ Validar integridad de datos antes de guardar
 
@@ -56,9 +56,14 @@ Definir las reglas de desarrollo en PHP para Joomla y el proyecto, asegurando:
 ### 6.1 Creación segura de artículo
 
 ```php id="php1"
-$article = JTable::getInstance('content');
-$article->title = $db->quote('Título seguro');
-$article->state = 1;
+use Joomla\CMS\Table\Table;
+
+$article = Table::getInstance('Content');
+$article->bind([
+     'title' => 'Título seguro',
+     'state' => 1,
+]);
+$article->check();
 $article->store();
 ```
 
@@ -67,6 +72,6 @@ $article->store();
 ```php id="php2"
 $data = json_decode(file_get_contents(JPATH_ROOT . '/data/file.json'), true);
 echo '<script type="application/json" id="data-json">'
-     . json_encode($data, JSON_HEX_TAG | JSON_HEX_AMP)
+     . json_encode($data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT)
      . '</script>';
 ```

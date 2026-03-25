@@ -21,7 +21,7 @@ Reglas para revisar código y detectar errores o inconsistencias.
 ## 3. Checklist obligatorio
 
 * [ ] Variables y funciones modularizadas
-* [ ] JS vanilla y ES Modules
+* [ ] JS nativo (vanilla) y ES Modules
 * [ ] JSON solo lectura
 * [ ] Uso correcto de APIs Joomla
 * [ ] Override seguro
@@ -32,7 +32,13 @@ Reglas para revisar código y detectar errores o inconsistencias.
 
 ---
 
-## 4. Anti-patrones
+## 4. Cierre de revisión
+
+* ✅ Confirmar `skills-definition-of-done.md` antes de aprobar
+
+---
+
+## 5. Anti-patrones
 
 * ❌ Mezcla de responsabilidades
 * ❌ Variables globales
@@ -41,7 +47,7 @@ Reglas para revisar código y detectar errores o inconsistencias.
 
 ---
 
-## 5. Ejemplo de revisión
+## 6. Ejemplo de revisión
 
 > Archivo JS que mezcla UI y mapa → ❌
 > Archivo JS modular, import/export, fetch correcto → ✅

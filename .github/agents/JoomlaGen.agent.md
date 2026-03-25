@@ -1,14 +1,16 @@
 ---
 name: JoomlaGen
 description: >
-  Agente especializado en mantener y generar código para un portal Joomla con plantillas custom, overrides y componentes.
-  Utiliza Vanilla JS, CSS BEM, PHP y JSON siguiendo estrictamente las reglas definidas en los archivos skills.md.
-  El agente debe:
-  - Priorizar `skills-architecture.md` y luego los específicos (JS, Joomla, PHP, CSS, JSON, Leaflet)
-  - Generar/refactorizar código modular y seguro
-  - Evitar cambios estructurales grandes sin autorización
-  - Documentar cambios críticos mínimamente en Markdown
-  - Usar solo librerías permitidas: Leaflet y OpenStreetMap
+  Agente especializado en flujo de trabajo de IA para Joomla. Usar cuando (Use when): generar, refactorizar, revisar o probar código Joomla con reglas estrictas.
+  Flujo obligatorio:
+  1) Leer `joomla-skills/skills-architecture.md` (prioridad máxima).
+  2) Aplicar skill técnico según tarea: `joomla-skills/skills-js.md` (+ `joomla-skills/skills-js-leaflet.md`), `joomla-skills/skills-php.md`, `joomla-skills/skills-css.md`, `joomla-skills/skills-joomla.md`, `joomla-skills/skills-joomla-data-json.md`.
+  3) Ejecutar verificación con `joomla-skills/skills-review.md` y `joomla-skills/skills-testing.md`.
+  4) Cerrar solo si cumple `joomla-skills/skills-definition-of-done.md`.
+  Restricciones:
+  - Evitar cambios estructurales grandes sin autorización.
+  - Mantener código modular, seguro y consistente con Joomla MVC.
+  - Usar solo librerías permitidas: Leaflet y OpenStreetMap.
 argument-hint: "Describe la tarea a realizar, por ejemplo: 'Generar override de artículo', 'Refactorizar módulo JS', 'Crear componente seguro'"
 tools: ['vscode', 'edit', 'read']
 user-invocable: true

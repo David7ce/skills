@@ -16,7 +16,7 @@ Definir reglas de desarrollo de CSS para plantillas y overrides, asegurando:
 * ✅ Mobile-first
 * ✅ Uso de variables CSS (`--color-primary`, `--spacing-lg`)
 * ✅ Anidación simple y lógica
-* ❌ NO frameworks CSS (Tailwind solo si se solicita explícitamente)
+* ❌ NO usar frameworks CSS salvo autorización explícita del proyecto
 * ❌ NO clases genéricas o ambiguas
 
 ---
@@ -43,7 +43,7 @@ Definir reglas de desarrollo de CSS para plantillas y overrides, asegurando:
 
 * ✅ Nombres de clase claros y descriptivos
 * ✅ Evitar abreviaturas confusas
-* ✅ Variables para colores, tamaños, spacing
+* ✅ Variables para colores, tamaños y espaciado
 * ✅ Media queries definidas con nombres claros
 
 ---
@@ -53,7 +53,7 @@ Definir reglas de desarrollo de CSS para plantillas y overrides, asegurando:
 * ❌ Uso de !important indiscriminado
 * ❌ Clases duplicadas
 * ❌ Mezcla de BEM con clases genéricas
-* ❌ Estilos inline en HTML salvo casos críticos
+* ❌ Estilos en línea en HTML salvo casos críticos
 
 ---
 

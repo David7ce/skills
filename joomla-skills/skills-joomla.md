@@ -4,7 +4,7 @@
 
 Definir las reglas y buenas prácticas para el desarrollo de **plantillas, overrides, componentes y gestión de contenido** en Joomla dentro de este proyecto.
 
-Este skill garantiza que:
+Este archivo garantiza que:
 
 * el agente respete la arquitectura del CMS
 * evite manipulaciones peligrosas de la base de datos
@@ -36,13 +36,15 @@ Este skill garantiza que:
 
 ### 3.1 Lectura de datos
 
-* ✅ Usar `$db = JFactory::getDbo();` y métodos Joomla
+* ✅ Usar APIs de Joomla con namespaces (`Factory`, `Table`)
 * ✅ Evitar SQL directo si existe método Joomla
 * ✅ Sanitizar resultados
 * Ejemplo correcto:
 
 ```php id="pjc23"
-$db = JFactory::getDbo();
+use Joomla\CMS\Factory;
+
+$db = Factory::getContainer()->get('DatabaseDriver');
 $query = $db->getQuery(true)
             ->select('*')
             ->from($db->quoteName('#__content'))
@@ -53,9 +55,9 @@ $articles = $db->loadObjectList();
 
 ### 3.2 Inserción de contenido
 
-* ✅ Priorizar API de Joomla para crear artículos, menús y items de menú
-* ✅ SQL solo si API falla
-* ✅ Validar todos los campos antes de insert
+* ✅ Priorizar API de Joomla para crear artículos, menús e ítems de menú
+* ✅ SQL solo si la API falla
+* ✅ Validar todos los campos antes de insertar
 
 ---
 
@@ -82,14 +84,14 @@ $articles = $db->loadObjectList();
 * ✅ Deben seguir MVC
 * ✅ Evitar lógica global
 * ✅ Evitar llamadas directas a DB si existe API
-* ❌ NO dependencias externas
+* ❌ NO usar dependencias externas
 * ❌ NO manipulación de core directamente
 
 ---
 
 ## 6. Formularios y PDFs
 
-* ✅ Formularios deben validar server-side y client-side
+* ✅ Formularios deben validar en servidor y cliente
 * ✅ Usar JForm para estructuras complejas
 * ✅ Generación de PDF solo mediante componentes controlados
 * ❌ NO mezclar lógica JS global dentro de PHP
@@ -101,7 +103,7 @@ $articles = $db->loadObjectList();
 * ✅ ACL básico aplicado según estándares Joomla
 * ✅ Multilenguaje: usar `JText::_()` y campos multilingüe
 * ❌ NO bypass de ACL
-* ❌ NO hardcode de idioma
+* ❌ NO hardcodear idioma
 
 ---
 
@@ -139,9 +141,14 @@ echo '<h1 class="article__title">' . $this->item->title . '</h1>';
 ### 10.2 Creación de artículo con API
 
 ```php id="ov3"
-$article = JTable::getInstance('content');
-$article->title = 'Nuevo artículo';
-$article->state = 1;
+use Joomla\CMS\Table\Table;
+
+$article = Table::getInstance('Content');
+$article->bind([
+  'title' => 'Nuevo artículo',
+  'state' => 1,
+]);
+$article->check();
 $article->store();
 ```
 

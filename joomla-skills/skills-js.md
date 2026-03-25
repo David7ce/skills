@@ -33,7 +33,7 @@ Este documento regula:
 
 ### 3.1 Base tecnológica
 
-* ✅ Usar JavaScript vanilla
+* ✅ Usar JavaScript nativo (vanilla)
 * ✅ Usar ES Modules (`import/export`)
 * ❌ NO usar frameworks (React, Vue, etc.)
 * ❌ NO usar librerías externas (excepto Leaflet)
@@ -98,6 +98,11 @@ Responsabilidad:
 | JSON pequeño o crítico | Inline |
 | JSON grande            | AJAX   |
 
+Umbrales operativos:
+
+* Inline: hasta 30 KB por payload y solo si afecta la primera renderización.
+* AJAX: obligatorio para payloads mayores a 30 KB o cuando no sea crítico para la primera renderización.
+
 ---
 
 ### 4.1 Inline (PHP → JS)
@@ -121,7 +126,7 @@ Ejemplo correcto:
 
 * ✅ Usar `fetch`
 * ✅ Manejar errores
-* ✅ evitar múltiples cargas innecesarias
+* ✅ Evitar múltiples cargas innecesarias
 
 Ejemplo:
 
