@@ -75,3 +75,15 @@ La migración ya fue aplicada con esta equivalencia:
 ## 6. Estado
 
 Referencias internas de skills, prompts y agentes Joomla ya actualizadas al nuevo árbol `core/projects`.
+
+## 7. Detección de Copilot (/skills y /create-skill)
+
+Para que VS Code detecte una skill como Agent Skill, debe existir un directorio dentro de `.github/skills/` que contenga un archivo `SKILL.md` con frontmatter YAML válido.
+
+Skill registrada en este repositorio:
+
+- `.github/skills/joomlagen-workflow/SKILL.md`
+
+Nota importante:
+
+- Los archivos `.md` sueltos dentro de `core/` o `projects/` son recursos/documentación, pero no se indexan como skill invocable mientras no estén empaquetados en un directorio con `SKILL.md`.
